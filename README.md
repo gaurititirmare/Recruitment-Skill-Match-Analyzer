@@ -1,116 +1,80 @@
 # Recruitment Skill Match Analyzer
 
-**Analyze and Evaluate Candidates — Effortlessly**
+## Overview
+The Recruitment Skill Match Analyzer is a full-stack application that helps recruiters and job seekers analyze how well a resume matches a given job description. By leveraging NLP and text similarity techniques, the tool scores resumes, highlights missing skills, and provides a detailed analysis of strengths and gaps.
 
-**Recruitment Skill Match Analyzer** is designed to help recruiters and hiring managers **evaluate how well a candidate’s skills align with a job description**. Powered by skill extraction, keyword matching, and similarity scoring, this tool simplifies candidate screening and makes hiring more efficient and data-driven.
+## Features
+- Upload resumes in PDF/DOCX format
+- Input job descriptions manually
+- AI-powered resume-to-job matching
+- Get percentage match and detailed feedback
+- Full-stack setup with Frontend and Backend
+- Modern responsive UI with React
+- Environment variables support for secure configuration
 
----
+## Tech Stack
+- Frontend: React, Tailwind CSS
+- Backend: Node.js, Express.js
+- NLP/Parsing: pdf-parse, mammoth, custom algorithms
+- Database: MongoDB (optional, if used)
+- Version Control: Git & GitHub
 
-## 🚀 Features
+## Installation
+1. Clone the repository:
+   git clone https://github.com/gaurititirmare/Recruitment-Skill-Match-Analyzer.git
+   cd Recruitment-Skill-Match-Analyzer
 
-- **Skill Extraction:** Automatically identifies candidate skills from resumes and job descriptions.
-- **Keyword Matching:** Calculates overlap between candidate skills and job requirements.
-- **Similarity Scoring:** Assigns a match score or percentage to quantify candidate fit.
-- **Detailed Insights:** Highlights matched skills, missing skills, and areas of improvement.
-- **Multi-format Support:** Handle resumes and job descriptions in TXT, PDF, or DOCX.
-- **Interactive UI:** Easy-to-use interface for quick analysis (if frontend included).
+2. Install dependencies for both Frontend and Backend:
+   cd Frontend
+   npm install
+   cd ../Backend
+   npm install
 
----
+## Configuration
+1. Create a `.env` file inside the Backend directory. Example:
+   PORT=5000
+   MONGO_URI=mongodb://localhost:27017/recruitmentdb
+   JWT_SECRET=your_secret_key
 
-## 🛠 Tech Stack
+2. (Optional) Add API keys if integrating external services.
 
-- **Backend:** Python (Flask / FastAPI)
-- **Frontend:** React (if included)
-- **Database:** SQLite / PostgreSQL (if used)
-- **NLP Libraries:** spaCy, NLTK, fuzzywuzzy (or similar)
-- **Others:** Docker (optional), GitHub Actions (optional)
+Note: Make sure `.env` is included in `.gitignore` so it does not get pushed to GitHub.
 
----
+## Running the Project
+1. Start the backend:
+   cd Backend
+   npm run dev
 
-## 📦 Getting Started
+2. Start the frontend:
+   cd ../Frontend
+   npm run dev
 
-### Prerequisites
-- Python 3.x installed
-- (Optionally) Node.js installed if frontend is separate
-- Virtual environment (recommended)
+3. Open your browser and visit:
+   http://localhost:5173   (Frontend)
+   http://localhost:5000   (Backend API)
 
-### Installation
+## Usage Example
+1. Upload a resume (PDF/DOCX) from the frontend.
+2. Enter or paste a job description in the input field.
+3. Click Analyze.
+4. Get results such as:
+   - Match percentage
+   - Missing skills
+   - Improvement suggestions
 
-Clone repository:
-git clone https://github.com/gaurititirmare/Recruitment-Skill-Match-Analyzer.git
-cd Recruitment-Skill-Match-Analyzer
+## Contributing
+We welcome contributions.
 
-Create and activate virtual environment:
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-Install dependencies:
-pip install -r requirements.txt
-
----
-
-## ▶ Running the Project
-
-Backend only:
-python app.py
-
-With frontend:
-# Run backend
-python app.py
-
-# Run frontend
-cd frontend
-npm install
-npm run dev
-
-Access via: http://localhost:8000 or the configured port.
-
----
-
-## 📊 Usage Example
-
-1. Launch the application.
-2. Upload or paste a candidate’s resume.
-3. Enter or upload the job description.
-4. Click **Analyze**.
-5. Get:
-   - Match score (e.g., “75% match”)
-   - Matched vs. missing skills
-   - Suggestions for resume improvement
-
----
-
-## ⚙ Configuration
-
-Example `.env` or config file:
-
-MATCH_THRESHOLD=0.7
-RESUME_PATH=data/resume.pdf
-JD_PATH=data/job_description.txt
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
+Steps to contribute:
 1. Fork the repo
-2. Create a branch: git checkout -b feature/my-feature
-3. Commit changes: git commit -m "Add my feature"
-4. Push: git push origin feature/my-feature
-5. Open a Pull Request
+2. Create a new branch
+   git checkout -b feature-branch
+3. Make your changes
+4. Commit your updates
+   git commit -m "Add new feature"
+5. Push your branch
+   git push origin feature-branch
+6. Create a Pull Request
 
----
-
-## 📄 License
-
-Licensed under the MIT License.
-
----
-
-## 📬 Contact & Acknowledgements
-
-Created by **Gauriti Tirmare** — feel free to reach out for collaboration or suggestions!
+## License
+This project is licensed under the MIT License – feel free to use and modify.
